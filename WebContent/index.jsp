@@ -13,7 +13,7 @@ java.util.Properties prop = new java.util.Properties(System.getProperties());
 java.util.Enumeration<?> keys = prop.propertyNames();
 while(keys.hasMoreElements()) {
 String key = (String)keys.nextElement();
-String value = (String)prop.get(key);
+String value = System.getProperty(key);
 %>
 <tr>
 <td><%= key %></td>
